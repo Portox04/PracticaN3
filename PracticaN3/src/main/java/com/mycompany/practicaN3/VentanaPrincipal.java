@@ -15,7 +15,7 @@ public class VentanaPrincipal extends JFrame {
 
     private final Planilla planilla;
     private final JTextArea logArea;
-    private static String ARCHIVO_DATOS = "empleados.dat";
+    private static String ARCHIVO_DATOS = "empleados.bin";
 
     public VentanaPrincipal() {
         super("Informacion empleados");
@@ -88,7 +88,7 @@ public class VentanaPrincipal extends JFrame {
     }
 
     private void cargarEmpleados() {
-        planilla.cargarDesdeArchivo("empleados.dat");
+        planilla.cargarDesdeArchivo(ARCHIVO_DATOS);
         JOptionPane.showMessageDialog(this, "Empleados cargados desde archivo.");
     }
 
